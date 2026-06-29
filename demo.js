@@ -75,7 +75,7 @@
   });
 
   track.addEventListener('mascot:reaction-start', (event) => {
-    status.textContent = `stwor ek reaguje: ${event.detail.category}`.replace('stwor ek', 'stworek');
+    status.textContent = `stworek reaguje: ${event.detail.category}`;
   });
 
   track.addEventListener('mascot:reaction-end', (event) => {
