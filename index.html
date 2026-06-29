@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interaktywny Stworek — prototyp ruchu</title>
-  <link rel="stylesheet" href="demo.css">
-  <link rel="stylesheet" href="src/mascot-v3.css">
+  <link rel="stylesheet" href="demo.css?v=4">
+  <link rel="stylesheet" href="src/mascot-v3.css?v=4">
+  <link rel="stylesheet" href="src/mascot-v4-overrides.css?v=4">
 </head>
 <body>
   <main class="workspace">
@@ -34,9 +35,9 @@
     </section>
 
     <aside class="panel">
-      <p class="panel__kicker">Trzeci prototyp</p>
+      <p class="panel__kicker">Czwarty prototyp</p>
       <h2>Płynniejszy ruch</h2>
-      <p>Stworek porusza się spokojniej i nie wchodzi przed kody QR. Przy lewym kafelku stoi po jego prawej stronie, a przy prawym kafelku po jego lewej stronie.</p>
+      <p>Stworek porusza się wyłącznie wewnątrz zaznaczonej bezpiecznej strefy. Przy lewym kafelku stoi po jego prawej stronie, a przy prawym kafelku po jego lewej stronie.</p>
 
       <h3>Reakcja na plakat</h3>
       <div class="panel__buttons">
@@ -60,11 +61,12 @@
 
       <div class="panel__status"><span>Status</span><strong id="status">uruchamianie…</strong></div>
       <label class="toggle"><input type="checkbox" id="debug-toggle"> Pokaż granice bezpiecznej strefy</label>
-      <p class="panel__note">Postać przy kafelkach pozostaje po stronie środka ekranu. Jej pozycja jest liczona poza obszarem kodów QR.</p>
+      <p class="panel__note">Pozycja postaci jest ograniczana do wnętrza środkowego pasa, dlatego nie może wejść na powierzchnię kodów QR.</p>
     </aside>
   </main>
 
-  <script src="src/mascot-v3.js"></script>
-  <script src="demo.js"></script>
+  <script src="src/mascot-v3.js?v=4"></script>
+  <script src="src/mascot-v4-patch.js?v=4"></script>
+  <script src="demo.js?v=4"></script>
 </body>
 </html>
