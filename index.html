@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interaktywny Stworek — prototyp</title>
+  <title>Interaktywny Stworek — prototyp ruchu</title>
   <link rel="stylesheet" href="demo.css">
   <link rel="stylesheet" href="src/mascot.css">
 </head>
@@ -26,7 +26,7 @@
         </div>
       </section>
 
-      <footer class="screen__dock">
+      <footer class="screen__dock" id="mascot-host">
         <article class="qr-card" id="qr-left"><div class="fake-qr" aria-hidden="true"></div><strong>MOKSiAL</strong><span>Skanuj</span></article>
         <div class="mascot-track" id="mascot-track" aria-hidden="true"><span>bezpieczna strefa stworka</span></div>
         <article class="qr-card" id="qr-right"><div class="fake-qr fake-qr--city" aria-hidden="true"></div><strong>Miasto</strong><span>Skanuj</span></article>
@@ -34,9 +34,11 @@
     </section>
 
     <aside class="panel">
-      <p class="panel__kicker">Niezależny prototyp</p>
-      <h2>Reakcje na plakat</h2>
-      <p>Przyciski symulują zmianę plakatu. Stworek porusza się wyłącznie w środkowym pasie między kodami QR.</p>
+      <p class="panel__kicker">Drugi prototyp</p>
+      <h2>Ruch postaci</h2>
+      <p>Ta wersja testuje bardziej „żywe” zachowanie: nogi i ręce w ruchu, obracanie się zależnie od kierunku oraz wejście na kafelek QR i oparcie się o niego.</p>
+
+      <h3>Reakcja na plakat</h3>
       <div class="panel__buttons">
         <button data-demo="koncert">🎵 Koncert</button>
         <button data-demo="wystawa">🖼️ Wystawa</button>
@@ -45,9 +47,20 @@
         <button data-demo="sport">🤯 Sport</button>
         <button data-demo="warsztaty">💡 Warsztaty</button>
       </div>
+
+      <h3>Ruch specjalny</h3>
+      <div class="panel__buttons panel__buttons--special">
+        <button data-action="climb-left">⬆️ Lewy QR</button>
+        <button data-action="climb-right">⬆️ Prawy QR</button>
+        <button data-action="lean-left-hand">🖐️ Oprzyj lewy</button>
+        <button data-action="lean-right-hand">🖐️ Oprzyj prawy</button>
+        <button data-action="lean-left-back">🪑 Plecy lewy</button>
+        <button data-action="lean-right-back">🪑 Plecy prawy</button>
+      </div>
+
       <div class="panel__status"><span>Status</span><strong id="status">uruchamianie…</strong></div>
       <label class="toggle"><input type="checkbox" id="debug-toggle"> Pokaż granice bezpiecznej strefy</label>
-      <p class="panel__note">Postać jest tymczasowa. Docelowe klatki PNG, WebP albo SVG będzie można podmienić bez zmiany mechaniki.</p>
+      <p class="panel__note">Docelową grafikę stworka i jego klatki animacji będzie można podmienić. Teraz sprawdzamy mechanikę ruchu, wejścia na QR i opierania się o kafelki.</p>
     </aside>
   </main>
 
