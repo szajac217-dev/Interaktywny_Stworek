@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interaktywny Stworek — prototyp</title>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="src/mascot.css">
+</head>
+<body>
+  <main class="workspace">
+    <section class="screen" id="signage-demo" aria-label="Podgląd ekranu digital signage">
+      <header class="screen__header">
+        <div class="card welcome"><span class="welcome__mark">MOKSiAL</span><strong>Witamy</strong></div>
+        <div class="card weather">🌤️ <strong>29°</strong><span>Dość ładnie</span></div>
+        <div class="card clock"><strong id="clock">14:06</strong><span id="date">pon., 29.06.2026</span></div>
+      </header>
+
+      <section class="poster-frame" aria-live="polite">
+        <div class="poster poster--wystawa" id="demo-poster" data-category="wystawa">
+          <p class="poster__eyebrow" id="poster-eyebrow">JOANNA TURKIEWICZ–DĄBROWSKA</p>
+          <h1 id="poster-title">PRZE<br>CI<br>WIEŃ<br>STWA</h1>
+          <p class="poster__subtitle" id="poster-subtitle">WYSTAWA MALARSTWA</p>
+          <div class="poster__art" aria-hidden="true"></div>
+          <div class="poster__details" id="poster-details">Wystawa czynna 17 maja – 12 lipca<br>Dom Carla i Gerharta Hauptmannów</div>
+        </div>
+      </section>
+
+      <footer class="screen__dock">
+        <article class="qr-card" id="qr-left"><div class="fake-qr" aria-hidden="true"></div><strong>MOKSiAL</strong><span>Skanuj</span></article>
+        <div class="mascot-track" id="mascot-track" aria-hidden="true"><span>bezpieczna strefa stworka</span></div>
+        <article class="qr-card" id="qr-right"><div class="fake-qr fake-qr--city" aria-hidden="true"></div><strong>Miasto</strong><span>Skanuj</span></article>
+      </footer>
+    </section>
+
+    <aside class="panel">
+      <p class="panel__kicker">Niezależny prototyp</p>
+      <h2>Reakcje na plakat</h2>
+      <p>Przyciski symulują zmianę plakatu. Stworek porusza się wyłącznie w środkowym pasie między kodami QR.</p>
+      <div class="panel__buttons">
+        <button data-demo="koncert">🎵 Koncert</button>
+        <button data-demo="wystawa">🖼️ Wystawa</button>
+        <button data-demo="rodzinne">🥳 Rodzinne</button>
+        <button data-demo="kino">🎬 Kino</button>
+        <button data-demo="sport">🤯 Sport</button>
+        <button data-demo="warsztaty">💡 Warsztaty</button>
+      </div>
+      <div class="panel__status"><span>Status</span><strong id="status">uruchamianie…</strong></div>
+      <label class="toggle"><input type="checkbox" id="debug-toggle"> Pokaż granice bezpiecznej strefy</label>
+      <p class="panel__note">Postać jest tymczasowa. Docelowe klatki PNG, WebP albo SVG będzie można podmienić bez zmiany mechaniki.</p>
+    </aside>
+  </main>
+
+  <script src="src/mascot.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>
