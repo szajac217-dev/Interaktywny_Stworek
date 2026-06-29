@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Interaktywny Stworek 3D — GLB</title>
+  <link rel="stylesheet" href="demo.css?v=glb1">
+  <link rel="stylesheet" href="src/mascot-3d.css?v=glb1">
+</head>
+<body>
+  <main class="workspace">
+    <section class="screen" id="signage-demo">
+      <header class="screen__header">
+        <div class="card welcome"><span class="welcome__mark">MOKSiAL</span><strong>Witamy</strong></div>
+        <div class="card weather"><strong>29°</strong><span>Dość ładnie</span></div>
+        <div class="card clock"><strong id="clock">14:06</strong><span id="date"></span></div>
+      </header>
+      <section class="poster-frame">
+        <div class="poster poster--wystawa" id="demo-poster">
+          <p class="poster__eyebrow">WERSJA DOCELOWA</p>
+          <h1>MODEL<br>3D</h1>
+          <p class="poster__subtitle">PIPELINE GLB</p>
+          <div class="poster__art"></div>
+          <div class="poster__details">Finalny model z teksturami i animacjami</div>
+        </div>
+      </section>
+      <footer class="screen__dock">
+        <article class="qr-card" id="qr-left"><div class="fake-qr"></div><strong>MOKSiAL</strong><span>Skanuj</span></article>
+        <div class="mascot-track" id="mascot-track"><span>bezpieczna strefa stworka</span></div>
+        <article class="qr-card" id="qr-right"><div class="fake-qr fake-qr--city"></div><strong>Miasto</strong><span>Skanuj</span></article>
+      </footer>
+    </section>
+    <aside class="panel">
+      <p class="panel__kicker">Wersja 3D — GLB</p>
+      <h2>Docelowy pipeline modelu</h2>
+      <p>Strona próbuje wczytać <strong>assets/model/fox-mascot.glb</strong>. Do czasu dodania finalnego pliku działa model proceduralny.</p>
+      <h3>Reakcje</h3>
+      <div class="panel__buttons">
+        <button data-demo="koncert">Koncert</button><button data-demo="wystawa">Wystawa</button><button data-demo="rodzinne">Rodzinne</button><button data-demo="kino">Kino</button><button data-demo="sport">Sport</button><button data-demo="warsztaty">Warsztaty</button>
+      </div>
+      <h3>Ruch 3D</h3>
+      <div class="panel__buttons panel__buttons--special">
+        <button data-action="walk-left">Idź w lewo</button><button data-action="walk-right">Idź w prawo</button><button data-action="lean-left">Lewy QR</button><button data-action="lean-right">Prawy QR</button><button data-action="climb-left">Wspinanie lewo</button><button data-action="climb-right">Wspinanie prawo</button>
+      </div>
+      <div class="panel__status"><span>Status</span><strong id="status">ładowanie finalnego modelu GLB…</strong></div>
+      <label class="toggle"><input type="checkbox" id="debug-toggle"> Pokaż bezpieczną strefę</label>
+      <p class="panel__note">Lewy QR: prawa ręka. Prawy QR: lewa ręka. Po wspinaniu model wraca do środka.</p>
+    </aside>
+  </main>
+  <script type="module" src="demo3d.js?v=glb1"></script>
+</body>
+</html>
