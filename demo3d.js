@@ -1,9 +1,9 @@
-import { StyledMascot3D } from './src/mascot-3d-styled.js';
+import { StyledMascot3DLeanFix } from './src/mascot-3d-lean-fix.js';
 
 const track=document.querySelector('#mascot-track');
 const status=document.querySelector('#status');
 const screen=document.querySelector('#signage-demo');
-const mascot=new StyledMascot3D({host:track,startPosition:.08,moveSpeed:.55});
+const mascot=new StyledMascot3DLeanFix({host:track,startPosition:.08,moveSpeed:.55});
 window.mascot3d=mascot;
 status.textContent='stylizowany model 3D gotowy';
 
