@@ -1,1 +1,1 @@
-const mascotSettings = { width: 76, height: 114, moveDuration: 1650 };
+const mascotSettings={version:'2.0.0',assetPartsPath:'assets/mascot/pro',assetPartCount:5,width:76,height:114,edgePadding:8,moveDuration:1650,walkPhaseMs:150,transitionPhaseMs:110,crossfadeMs:95,idleMinMs:15000,idleMaxMs:30000,randomBehaviors:true,reducedMotion:false};
