@@ -1,0 +1,1 @@
+const mascotSettings = { width: 76, height: 114, moveDuration: 1650 };
