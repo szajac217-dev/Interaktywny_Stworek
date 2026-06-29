@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interaktywny Stworek — prototyp ruchu</title>
   <link rel="stylesheet" href="demo.css">
-  <link rel="stylesheet" href="src/mascot-v2-base.css">
-  <link rel="stylesheet" href="src/mascot-v2-animations.css">
+  <link rel="stylesheet" href="src/mascot-v3.css">
 </head>
 <body>
   <main class="workspace">
@@ -35,9 +34,9 @@
     </section>
 
     <aside class="panel">
-      <p class="panel__kicker">Drugi prototyp</p>
-      <h2>Ruch postaci</h2>
-      <p>Ta wersja testuje bardziej „żywe” zachowanie: nogi i ręce w ruchu, obracanie się zależnie od kierunku oraz wejście na kafelek QR i oparcie się o niego.</p>
+      <p class="panel__kicker">Trzeci prototyp</p>
+      <h2>Płynniejszy ruch</h2>
+      <p>Stworek porusza się spokojniej i nie wchodzi przed kody QR. Przy lewym kafelku stoi po jego prawej stronie, a przy prawym kafelku po jego lewej stronie.</p>
 
       <h3>Reakcja na plakat</h3>
       <div class="panel__buttons">
@@ -61,11 +60,11 @@
 
       <div class="panel__status"><span>Status</span><strong id="status">uruchamianie…</strong></div>
       <label class="toggle"><input type="checkbox" id="debug-toggle"> Pokaż granice bezpiecznej strefy</label>
-      <p class="panel__note">Docelową grafikę stworka i jego klatki animacji będzie można podmienić. Teraz sprawdzamy mechanikę ruchu, wejścia na QR i opierania się o kafelki.</p>
+      <p class="panel__note">Postać przy kafelkach pozostaje po stronie środka ekranu. Jej pozycja jest liczona poza obszarem kodów QR.</p>
     </aside>
   </main>
 
-  <script src="src/mascot-v2.js"></script>
+  <script src="src/mascot-v3.js"></script>
   <script src="demo.js"></script>
 </body>
 </html>
