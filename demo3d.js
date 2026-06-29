@@ -1,11 +1,24 @@
-import { StyledMascot3DLeanFix } from './src/mascot-3d-lean-fix.js';
+import { MascotGLB } from './src/mascot-glb.js';
 
 const track=document.querySelector('#mascot-track');
 const status=document.querySelector('#status');
 const screen=document.querySelector('#signage-demo');
-const mascot=new StyledMascot3DLeanFix({host:track,startPosition:.08,moveSpeed:.55});
+const mascot=new MascotGLB({
+  host:track,
+  startPosition:.08,
+  moveSpeed:.55,
+  modelUrl:'assets/model/fox-mascot.glb'
+});
 window.mascot3d=mascot;
-status.textContent='stylizowany model 3D gotowy';
+status.textContent='ładowanie finalnego modelu GLB…';
+
+track.addEventListener('mascot:model-ready',(event)=>{
+  if(event.detail.mode==='glb'){
+    status.textContent='finalny model GLB gotowy';
+  }else{
+    status.textContent='tryb testowy: model proceduralny';
+  }
+});
 
 document.querySelectorAll('[data-demo]').forEach((button)=>{
   button.addEventListener('click',()=>{
@@ -25,7 +38,7 @@ document.querySelectorAll('[data-action]').forEach((button)=>{
     if(action==='lean-right')await mascot.leanOn('right');
     if(action==='climb-left')await mascot.climb('left');
     if(action==='climb-right')await mascot.climb('right');
-    status.textContent='stylizowany model 3D gotowy';
+    status.textContent=mascot.finalModelReady?'finalny model GLB gotowy':'tryb testowy: model proceduralny';
   });
 });
 
