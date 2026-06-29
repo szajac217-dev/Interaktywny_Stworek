@@ -1,11 +1,11 @@
-import { Mascot3D } from './src/mascot-3d.js';
+import { StyledMascot3D } from './src/mascot-3d-styled.js';
 
 const track=document.querySelector('#mascot-track');
 const status=document.querySelector('#status');
 const screen=document.querySelector('#signage-demo');
-const mascot=new Mascot3D({host:track,startPosition:.08,moveSpeed:.55});
+const mascot=new StyledMascot3D({host:track,startPosition:.08,moveSpeed:.55});
 window.mascot3d=mascot;
-status.textContent='model 3D gotowy';
+status.textContent='stylizowany model 3D gotowy';
 
 document.querySelectorAll('[data-demo]').forEach((button)=>{
   button.addEventListener('click',()=>{
@@ -25,7 +25,7 @@ document.querySelectorAll('[data-action]').forEach((button)=>{
     if(action==='lean-right')await mascot.leanOn('right');
     if(action==='climb-left')await mascot.climb('left');
     if(action==='climb-right')await mascot.climb('right');
-    status.textContent='model 3D gotowy';
+    status.textContent='stylizowany model 3D gotowy';
   });
 });
 
