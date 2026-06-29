@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interaktywny Stworek PRO</title>
-  <link rel="stylesheet" href="demo.css?v=pro1">
-  <link rel="stylesheet" href="src/mascot-pro.css?v=pro1">
+  <title>Interaktywny Stworek PRO 2.0</title>
+  <link rel="stylesheet" href="demo.css?v=pro2">
+  <link rel="stylesheet" href="src/mascot-pro.css?v=pro2">
+  <link rel="stylesheet" href="src/pro-panel.css?v=pro2">
 </head>
 <body>
   <main class="workspace">
@@ -34,9 +35,9 @@
     </section>
 
     <aside class="panel">
-      <p class="panel__kicker">Wersja PRO</p>
-      <h2>Półrealistyczny model obrazkowy</h2>
-      <p>Model CSS został zastąpiony gotowym liskiem z logotypami MOKSiAL i Szklarskiej Poręby. Animacja korzysta z osobnych profesjonalnych póz.</p>
+      <p class="panel__kicker">Wersja PRO 2.0</p>
+      <h2>Rozbudowana animacja</h2>
+      <p>Chód ma osiem faz ruchu, postać korzysta z przejść start–stop, mrugania, mikroruchów, osobnych zachowań przy krawędziach i pełnej sekwencji wspinania.</p>
 
       <h3>Reakcja na plakat</h3>
       <div class="panel__buttons">
@@ -54,15 +55,28 @@
         <button data-action="climb-right">⬆️ Wspinanie prawo</button>
         <button data-action="lean-left">🖐️ Oparcie lewo</button>
         <button data-action="lean-right">🖐️ Oparcie prawo</button>
+        <button data-action="blink">😉 Mrugnięcie</button>
+        <button data-action="look">👀 Spojrzenie</button>
+        <button data-action="happy">😄 Radość</button>
+        <button data-action="surprised">😮 Zaskoczenie</button>
       </div>
 
       <div class="panel__status"><span>Status</span><strong id="status">wczytywanie modelu…</strong></div>
       <label class="toggle"><input type="checkbox" id="debug-toggle"> Pokaż granice bezpiecznej strefy</label>
-      <p class="panel__note">Postać porusza się wyłącznie w środkowej strefie i nie może zasłonić kodów QR.</p>
+
+      <section class="pro-settings">
+        <h3>Konfiguracja</h3>
+        <label class="pro-setting"><span>Wielkość postaci</span><output id="setting-width-value">76px</output><input id="setting-width" type="range" min="58" max="96" value="76"></label>
+        <label class="pro-setting"><span>Czas przejścia</span><output id="setting-speed-value">1650 ms</output><input id="setting-speed" type="range" min="900" max="2600" step="50" value="1650"></label>
+        <label class="pro-setting"><span>Losowe zachowanie co</span><output id="setting-idle-value">15 s</output><input id="setting-idle" type="range" min="10" max="45" value="15"></label>
+        <label class="pro-setting pro-setting--check"><span>Losowe zachowania</span><input id="setting-random" type="checkbox" checked></label>
+        <p class="pro-version">Silnik PRO 2.0 • preload WebP • reakcje kontekstowe • bezpieczna strefa</p>
+      </section>
     </aside>
   </main>
 
-  <script src="src/mascot-pro.js?v=pro1"></script>
-  <script src="demo-pro.js?v=pro1"></script>
+  <script src="src/pro-settings.js?v=pro2"></script>
+  <script src="src/mascot-pro.js?v=pro2"></script>
+  <script src="demo-pro-v2.js?v=pro2"></script>
 </body>
 </html>
