@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interaktywny Stworek — prototyp ruchu</title>
-  <link rel="stylesheet" href="demo.css?v=5">
-  <link rel="stylesheet" href="src/mascot-v3.css?v=5">
-  <link rel="stylesheet" href="src/mascot-v4-overrides.css?v=5">
-  <link rel="stylesheet" href="src/mascot-v5-overrides.css?v=5">
+  <link rel="stylesheet" href="demo.css?v=6">
+  <link rel="stylesheet" href="src/mascot-v3.css?v=6">
+  <link rel="stylesheet" href="src/mascot-v4-overrides.css?v=6">
+  <link rel="stylesheet" href="src/mascot-v5-overrides.css?v=6">
+  <link rel="stylesheet" href="src/mascot-v6-model.css?v=6">
 </head>
 <body>
   <main class="workspace">
@@ -36,9 +37,9 @@
     </section>
 
     <aside class="panel">
-      <p class="panel__kicker">Piąty prototyp</p>
-      <h2>Tylko bezpieczna strefa</h2>
-      <p>Warstwa postaci znajduje się teraz fizycznie wewnątrz środkowego prostokąta. Stworek nie może wejść przed lewy ani prawy kod QR.</p>
+      <p class="panel__kicker">Szósty prototyp</p>
+      <h2>Model skierowany do widza</h2>
+      <p>Postać pozostaje przodem do odbiorcy podczas ruchu w obu kierunkach. Kierunek pokazują oczy, gesty rąk i lekkie przechylenie sylwetki.</p>
 
       <h3>Reakcja na plakat</h3>
       <div class="panel__buttons">
@@ -62,13 +63,13 @@
 
       <div class="panel__status"><span>Status</span><strong id="status">uruchamianie…</strong></div>
       <label class="toggle"><input type="checkbox" id="debug-toggle"> Pokaż granice bezpiecznej strefy</label>
-      <p class="panel__note">Poziome wyjście poza bezpieczny prostokąt jest dodatkowo przycinane, więc nawet ręce nie mogą zasłonić kodów QR.</p>
+      <p class="panel__note">Obie nogi pozostają widoczne, a twarz nie obraca się bokiem. To pierwszy etap dopracowania docelowego modelu wersji 6.</p>
     </aside>
   </main>
 
-  <script src="src/mascot-v3.js?v=5"></script>
-  <script src="src/mascot-v4-patch.js?v=5"></script>
-  <script src="src/mascot-v5-patch.js?v=5"></script>
-  <script src="demo-v5.js?v=5"></script>
+  <script src="src/mascot-v3.js?v=6"></script>
+  <script src="src/mascot-v4-patch.js?v=6"></script>
+  <script src="src/mascot-v5-patch.js?v=6"></script>
+  <script src="demo-v5.js?v=6"></script>
 </body>
 </html>
