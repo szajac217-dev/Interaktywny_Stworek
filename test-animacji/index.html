@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Test animacji lisa</title>
+  <link rel="stylesheet" href="../src/mascot-pro.css?v=animtest1">
+  <link rel="stylesheet" href="../src/mascot-pro-2-1.css?v=animtest1">
+  <link rel="stylesheet" href="test-animacji.css?v=animtest1">
+</head>
+<body>
+  <main class="workspace">
+    <section class="screen" aria-label="Test animacji lisa">
+      <header class="screen__header">
+        <div class="card welcome"><span class="welcome__mark">MOKSiAL</span><strong>Witamy</strong></div>
+        <div class="card weather">🌤️ <strong>29°</strong><span>Dość ładnie</span></div>
+        <div class="card clock"><strong>TEST</strong><span>animacje lisa</span></div>
+      </header>
+
+      <section class="poster-frame">
+        <div class="poster">
+          <p class="poster__eyebrow">WERSJA TESTOWA</p>
+          <h1>ANIMACJE<br>LISA</h1>
+          <p class="poster__subtitle">Więcej faz ruchu</p>
+          <div class="poster__details">Chód 10 • ręce 6 • skok 10 • mruganie 5 • opieranie 8</div>
+        </div>
+      </section>
+
+      <footer class="screen__dock">
+        <article class="qr-card"><div class="fake-qr"></div><strong>MOKSiAL</strong><span>Skanuj</span></article>
+        <div class="mascot-track" id="mascot-track"><span>bezpieczna strefa stworka</span></div>
+        <article class="qr-card"><div class="fake-qr fake-qr--city"></div><strong>Miasto</strong><span>Skanuj</span></article>
+      </footer>
+    </section>
+
+    <aside class="panel">
+      <p class="panel__kicker">Test klatek animacji</p>
+      <h2>Komplet bez wspinania</h2>
+      <p>Każdy przycisk uruchamia sekwencję z ustaloną liczbą faz. Po animacji lis wraca do pozycji neutralnej.</p>
+
+      <div class="panel__buttons panel__buttons--special">
+        <button data-action="idle">Pozycja neutralna</button>
+        <button data-action="walk">Chód — 10 klatek</button>
+        <button data-action="arms">Podnoszenie rąk — 6 klatek</button>
+        <button data-action="jump">Skok z radości — 10 klatek</button>
+        <button data-action="blink">Mruganie — 5 klatek</button>
+        <button data-action="lean-left">Oparcie o lewy QR — 8 klatek</button>
+        <button data-action="lean-right">Oparcie o prawy QR — 8 klatek</button>
+      </div>
+
+      <div class="panel__status"><span>Status</span><strong id="status">Wczytywanie modelu…</strong></div>
+      <p class="panel__note">Lewy QR: prawa ręka. Prawy QR: lewa ręka. Model nie wykonuje już wspinania.</p>
+    </aside>
+  </main>
+
+  <script src="../src/mascot-pro.js?v=animtest1"></script>
+  <script src="test-animacji.js?v=animtest1"></script>
+</body>
+</html>
